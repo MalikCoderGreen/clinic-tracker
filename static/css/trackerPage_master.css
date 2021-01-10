@@ -1,3 +1,4 @@
+
 #covid-header{
     color : rgb(163, 14, 14);
 }
@@ -6,6 +7,7 @@
     color : rgb(163, 14, 14);
 }
 
-#faqs-header{
+#faqs-header, #blog-header{
     color : rgb(163, 14, 14);
 }
+

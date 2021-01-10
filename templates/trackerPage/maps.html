@@ -1,0 +1,45 @@
+
+{% extends 'trackerPage/base.html' %}
+{% load static %}
+
+{% block body_block %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>COVID-clinic-tracker</title>
+        <!-- api for mapbox-->
+        <script src='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js'></script>
+        <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css' rel='stylesheet'/>
+    </head>
+<body>
+    <!-- class code to get jumbotron in bootstrap v5-->
+    <div class='bg-light p-5 rounded-lg m-3'>
+        <h1 id='covid-header'>COVID-19 clinics page</h1>
+    </div>
+
+    <div class='container'>
+    <div class='row'>
+        <div class='col-lg-2 col-md-4 col-sm-6' id='map' style='width: 400px; height: 300px;'></div>
+        <script>
+            mapboxgl.accessToken = 'pk.eyJ1IjoibWFsaWFrZzk3IiwiYSI6ImNranFqd2c3ODFvYngyeXFuNHN1Zmxic3EifQ.IG7UWc4kQFBJEz5JcryACw';
+            var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+            center: [-74.5, 40], // starting position [lng, lat]
+            zoom: 9 // starting zoom
+            });
+        </script>
+
+    </div>
+    <div class='row'>
+        <div class='col-lg-2 col-md-4 col-sm-6'>
+      <table>
+          <th id='head-of-clinics'>List of clinics</th>
+      </table>
+    </div>
+    </div>
+    </div>
+</body>
+
+</html>
+{% endblock %}

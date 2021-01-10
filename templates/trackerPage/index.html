@@ -3,32 +3,16 @@
 {% load static %}
 
 {% block body_block %}
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>COVID-clinic-tracker</title>
-    </head>
 <body>
-    <!-- class code to get jumbotron in bootstrap v5-->
-    <div class='bg-light p-5 rounded-lg m-3'>
-        <h1 id='covid-header'>COVID-19 clinics page</h1>
+<div class='container'>
+    <div class='jumbotron'>
+        <h1 id='blog-header'>Pandemic Blog</h1>   
     </div>
 
-    <div class='container'>
-    <div class='row'>
-    <div class='col-lg-2 col-md-4 col-sm-6' align='center'>
-        <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-76.85844182968141%2C39.232801628209174%2C-76.82754278182985%2C39.245797841460266&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/">View Larger Map</a></small>
+    <div>
+        <img class ='col-lg-4 col-6 px-0' align='right' src="https://vcahospitals.com/-/media/vca/images/lifelearn-images-foldered/18888/covid-19_virus.png?la=en&hash=7320F9F3761E86D71CBF3ECC1BEFCD10" alt="should be the virus here">
     </div>
-    </div>
-    <div class='row'>
-        <div class='col-lg-2 col-md-4 col-sm-6'>
-      <table>
-          <th id='head-of-clinics'>List of clinics</th>
-      </table>
-    </div>
-    </div>
-    </div>
+
+</div>
 </body>
-
-</html>
 {% endblock %}
