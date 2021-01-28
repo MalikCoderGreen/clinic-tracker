@@ -16,12 +16,17 @@ def maps(request):
     else:
         ip = request.META.get('REMOTE_ADDR')
     
+
+    # Remove everything after colon. 
+    parsed_ip = ip[:ip.find(":") + 1]
+
+    #print(parsed_ip)
     # Use API with get function.
     my_ip = get('https://api.ipify.org').text
     access_token = '6d22498aabaf10'
     # Get lat and long.
     handler = ipinfo.getHandler(access_token)
-    details = handler.getDetails(ip)
+    details = handler.getDetails(parsed_ip)
     
  
     # Send to template through context. 
