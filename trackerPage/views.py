@@ -7,6 +7,7 @@ import ipinfo
 def index(request): 
     return render(request, 'trackerPage/index.html')
 
+# View to handle showing openstreetmap with user lat and long. 
 def maps(request):
     
     
